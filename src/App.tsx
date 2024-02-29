@@ -1,9 +1,22 @@
 import "./App.css";
+import {
+  Types,
+  Functions,
+  AdvancedTypes,
+  TypeNarrowing,
+  UnionTypes,
+  ComplexTypes,
+} from "./components";
 
 function App() {
   return (
     <div className="App">
-      <h1>Vite + React</h1>
+      <Types />
+      <Functions />
+      <ComplexTypes />
+      <UnionTypes />
+      <TypeNarrowing />
+      <AdvancedTypes />
     </div>
   );
 }
