@@ -7,7 +7,7 @@
 
 ```bash
 $ pandoc typescript.md -s -o index.html --template templates/default.html5 --metadata title='Typescript'
---no-highlight
+
 ```
 
 > add your custom styles in `custom.css` 
