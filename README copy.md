@@ -2,11 +2,11 @@
 
 
 1. checkout to `gh-pages` branch
-2. fix / add / modify `typescript.md`
+2. fix / add / modify `beginner_cheatsheet.md`  or other `md` source file.
 3. when ready, do:
 
 ```bash
-$ pandoc typescript.md -s -o index.html --template templates/default.html5 --metadata title='Typescript'
+$ pandoc sourcefile.md  -s -o sourcefile.html --template templates/default.html5 --metadata title='TYPESCRIPT CHEATSHEETS'
 
 ```
 

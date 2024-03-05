@@ -135,7 +135,7 @@ As TypeScript code can be compiled to ES5, it includes all of the native JavaScr
 
 #### String
 
-> Another fundamental part of creating programs in JavaScript for webpages and servers alike is working with textual data. As in other languages, we use the type string to refer to these textual datatypes. Just like JavaScript, TypeScript also uses double quotes (") or single quotes (') to surround string data.
+> As in other languages, we use the type string to refer to these textual datatypes. Just like JavaScript, TypeScript also uses double quotes (") or single quotes (') to surround string data.
 
 ```ts
   const myName: string = 'Robert';
