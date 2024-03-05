@@ -1,24 +1,11 @@
 import "./App.css";
-import {
-  Types,
-  Functions,
-  AdvancedTypes,
-  TypeNarrowing,
-  UnionTypes,
-  ComplexTypes,
-} from "./components";
 
-function App() {
+
+
+export default function App() {
   return (
     <div className="App">
-      <Types />
-      <Functions />
-      <ComplexTypes />
-      <UnionTypes />
-      <TypeNarrowing />
-      <AdvancedTypes />
+      <h1>Hi</h1>
     </div>
   );
 }
-
-export default App;
