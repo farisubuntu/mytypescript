@@ -50,3 +50,17 @@ blockquote > :first-child {
 blockquote > :last-child {
  margin-bottom: 0;
 }
+span.co{
+  color:darkorange;
+  font-weight: bold;
+}
+span.ot{
+  color:darkorange;
+  font-weight: bold;
+}
+span.ow{
+  color:darkorange;
+  font-weight: bold;
+}
+span.kw{
+}

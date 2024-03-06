@@ -1,93 +1,108 @@
-@import url("https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css");
-@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,700');
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
 
-body {
-  --color: rgba(30, 30, 30);
-  --bgColor: rgba(245, 245, 245);
-  min-height: 100vh;
-  display: grid;
-  align-content: center;
-  gap: 2rem;
-  padding: 2rem;
-  font-family: "Exo 2", sans-serif;
-  color: var(--color);
-  background: var(--bgColor);
-}
+$gr-1:linear-gradient(170deg, #01E4F8 0%, #1D3EDE 100%);
+$gr-2:linear-gradient(170deg, #B4EC51 0%, #429321 100%);
+$gr-3:linear-gradient(170deg, #C86DD7 0%, #3023AE 100%);
 
-h1 { text-align: center }
+.gr-1{background: $gr-1;}
+.gr-2{background: $gr-2;}
+.gr-3{background: $gr-3;}
 
-ol {
-  /* width: min(60rem, 90%); */
-  margin-inline: auto;
+*{transition: .5s;}
 
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-
-  list-style: none;
-  counter-reset: stepnr;
-}
-
-li:nth-child(6n + 1) { --accent-color: #b8df4e }
-li:nth-child(6n + 2) { --accent-color: #4cbccb }
-li:nth-child(6n + 3) { --accent-color: #7197d3 }
-li:nth-child(6n + 4) { --accent-color: #ae78cb }
-
-
-ol li {
-  counter-increment: stepnr;
-  width: 18rem;
-  --borderS: 2rem;
-  aspect-ratio: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: calc(var(--borderS) + 2rem);
+.h-100{height: 100vh !important;}
+.align-middle{
   position: relative;
-}
-ol li::before,
-ol li::after {
-  inset: 0;
-  position: absolute;
-  border-radius: 50%;
-  border: var(--borderS) solid var(--bgColor);
-  line-height: 1.1;
-}
-ol li::before {
-  content: counter(stepnr);
-  color: var(--accent-color);
-  padding-left: 10rem;
-  font-size: 8rem;
-  /* font-weight: 500; */
-  /* overflow: hidden; */
+  top:50%;
+  transform:translateY(-50%);
 }
 
-ol li::after {
-  content: "";
-  filter: drop-shadow(-0.25rem 0.25rem 0.0675rem rgba(0, 0, 0, 0.75)) blur(5px);
+.column{
+  margin-top:3rem;
+  padding-left:3rem;
+  &:hover{
+    padding-left:0;
+    .card .txt{
+      margin-left:1rem;
+      h1, p{
+        /* color:rgba(255,255,255,1); */
+        opacity:1;
+      }
+    }
+    a{
+      /* color:rgba(255,255,255,1); */
+      &:after{
+      width: 10%;
+      }
+    }
+  }
 }
-
-ol li > * { width: 7.5rem }
-ol li .icon { font-size: 1.4rem; color: var(--accent-color); text-align: center }
-ol li .title { font-size:1.4rem; font-weight: 500 }
-ol li .descr { font-size: 1rem; font-weight: 300 }
-
-.credits { margin-top: 2rem; text-align: right }
-.credits a { color: var(--color) }
-
-li:hover{
-width: 25%;
-transition: 2s;
-font-size:5rem;
-cursor:pointer;
-
-} 
+.card{
+  min-height:170px;
+  margin: 0;
+  padding: 1.7rem 1.2rem;
+  border: none;
+  border-radius: 0;
+  color:rgb(5, 25, 112);
+  letter-spacing: .05rem;
+  font-family: 'Oswald', sans-serif;
+  box-shadow: 0 0 21px rgba(0,0,0,.27);
+  .txt{
+    margin-left:-3rem;
+    z-index: 1;
+    h1{
+      font-size:1.5rem;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+    p{
+      font-size:.8rem;
+      font-family: Hack, sans-serif;
+      letter-spacing: 0rem;
+      margin-top:33px;
+      opacity:0;
+      color:rgba(255,255,255,1);
+    }
+  }
+  a{
+    z-index:3;
+    font-size: .8rem;
+    color:rgba(0,0,0,1);
+    margin-left:1rem;
+    position:relative;
+    bottom: -.5rem;
+    text-transform: uppercase;
+    &:after {
+      content:"";
+      display: inline-block;
+      height: 0.5em;
+      width: 0;
+      margin-right: -100%;
+      margin-left: 10px;
+      border-top: 1px solid rgba(255,255,255,1);
+      transition: .5s;
+    }
+  }
+  .ico-card{
+    position:absolute;
+    top: 0;
+    left:0;
+    bottom:0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  i{
+    position: relative;
+    right: -50%;
+    top:60%;
+    font-size: 12rem;
+    line-height: 0;
+    opacity: .2;
+    color:rgba(255,255,255,1);
+    z-index: 0;
+   }
+}
