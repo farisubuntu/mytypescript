@@ -17,7 +17,7 @@ body {
   align-content: center;
   gap: 2rem;
   padding: 2rem;
-  /* font-family: "Exo 2", sans-serif;ds */
+  font-family: "Exo 2", sans-serif;
   color: var(--color);
   background: var(--bgColor);
 }
@@ -41,8 +41,7 @@ li:nth-child(6n + 1) { --accent-color: #b8df4e }
 li:nth-child(6n + 2) { --accent-color: #4cbccb }
 li:nth-child(6n + 3) { --accent-color: #7197d3 }
 li:nth-child(6n + 4) { --accent-color: #ae78cb }
-li:nth-child(6n + 5) { --accent-color: #7dc7a4 }
-li:nth-child(6n + 6) { --accent-color: #f078c2 }
+
 
 ol li {
   counter-increment: stepnr;
